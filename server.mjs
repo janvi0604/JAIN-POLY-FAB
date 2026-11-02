@@ -3,8 +3,12 @@ import { createReadStream, existsSync, statSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const root = path.dirname(fileURLToPath(import.meta.url));
+const projectRoot = path.dirname(fileURLToPath(import.meta.url));
+const root = process.argv.includes('--dist') ? path.join(projectRoot, 'dist') : projectRoot;
 const port = Number(process.env.PORT || 4173);
+const hostArgument = process.argv.slice(2).find(argument => argument.startsWith('--host='))?.slice(7)
+  || process.argv.slice(2).find(argument => argument === '0.0.0.0' || /^\d{1,3}(\.\d{1,3}){3}$/.test(argument));
+const host = hostArgument || process.env.HOST || '127.0.0.1';
 const mimeTypes = {
   '.html': 'text/html; charset=utf-8',
   '.css': 'text/css; charset=utf-8',
@@ -44,8 +48,8 @@ const server = createServer((request, response) => {
   createReadStream(filePath).pipe(response);
 });
 
-server.listen(port, '127.0.0.1', () => {
-  process.stdout.write(`Jain Poly Fab site running at http://localhost:${port}\n`);
+server.listen(port, host, () => {
+  process.stdout.write(`Jain Poly Fab site running on ${host}:${port}\n`);
 });
 
 server.on('error', error => {

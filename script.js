@@ -4,6 +4,17 @@
   const nav = document.querySelector('.main-nav');
   const form = document.querySelector('#inquiry-form');
   const status = document.querySelector('#form-status');
+  const productDialog = document.querySelector('#product-dialog');
+  const dialogTitle = document.querySelector('#dialog-title');
+  const dialogDescription = document.querySelector('#dialog-description');
+  const dialogImage = document.querySelector('#dialog-image');
+
+  const closeMenu = () => {
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.setAttribute('aria-label', 'Open navigation');
+    nav.classList.remove('open');
+    nav.querySelectorAll('.nav-products[open]').forEach(menu => { menu.open = false; });
+  };
 
   const updateHeader = () => header.classList.toggle('scrolled', window.scrollY > 24);
   updateHeader();
@@ -16,16 +27,35 @@
     nav.classList.toggle('open', !expanded);
   });
   nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-    menuButton.setAttribute('aria-expanded', 'false');
-    menuButton.setAttribute('aria-label', 'Open navigation');
-    nav.classList.remove('open');
+    closeMenu();
   }));
+  document.addEventListener('click', event => {
+    if (nav.classList.contains('open') && !header.contains(event.target)) closeMenu();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && nav.classList.contains('open')) {
+      closeMenu();
+      menuButton.focus();
+    }
+  });
 
-  document.querySelectorAll('[data-product]').forEach(link => link.addEventListener('click', () => {
+  document.querySelectorAll('[data-product]').forEach(link => link.addEventListener('click', event => {
+    event.preventDefault();
     const select = form.elements.product;
     const product = link.dataset.product;
     for (const option of select.options) if (option.text === product) select.value = product;
+    dialogTitle.textContent = product;
+    dialogDescription.textContent = link.dataset.description;
+    const cardImage = link.querySelector('img');
+    dialogImage.src = cardImage.src;
+    dialogImage.alt = cardImage.alt;
+    if (typeof productDialog.showModal === 'function') productDialog.showModal();
   }));
+  document.querySelector('.dialog-close').addEventListener('click', () => productDialog.close());
+  document.querySelector('#dialog-enquire').addEventListener('click', () => productDialog.close());
+  productDialog.addEventListener('click', event => {
+    if (event.target === productDialog) productDialog.close();
+  });
 
   form.addEventListener('submit', event => {
     event.preventDefault();

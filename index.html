@@ -6,6 +6,7 @@
   <meta name="theme-color" content="#161719" />
   <meta name="description" content="Jain Poly Fab Private Limited makes HDPE and PP woven fabrics and packaging in Jammu, with manufacturing experience since 1994." />
   <title>Jain Poly Fab | Woven Packaging, Made to Perform</title>
+  <link rel="icon" type="image/png" href="public/images/jain-polyfab-logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -14,10 +15,12 @@
 <body>
   <header class="site-header" id="top">
     <div class="nav-wrap">
-      <a class="brand" href="#top" aria-label="Jain Poly Fab home"><img src="public/images/jain-polyfab-logo.jpg" alt="Jain Polyfab" /></a>
+      <a class="brand" href="#top" aria-label="Jain Poly Fab home"><img src="public/images/jain-polyfab-logo.png" alt="Jain Polyfab" /></a>
       <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
       <nav class="main-nav" id="main-nav" aria-label="Main navigation">
-        <a href="#about">About</a><a href="#products">Products</a><a href="#manufacturing">Manufacturing</a><a href="#quality">Quality</a><a href="#contact">Contact</a>
+        <a href="#top">Home</a><a href="#about">About</a>
+        <details class="nav-products"><summary>Products</summary><div class="nav-products-menu"><a href="#product-fabric">HDPE / PP Woven Fabric</a><a href="#product-block-bottom">Block Bottom Bags</a><a href="#product-cement">Cement Bags</a><a href="#product-bopp">BOPP Laminated Bags</a><a href="#product-sand">Sand Bags</a></div></details>
+        <a href="#manufacturing">Manufacturing</a><a href="#quality">Quality</a><a href="#industries">Industries</a><a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
@@ -39,8 +42,9 @@
     <section class="about section" id="about">
       <div class="wrap about-grid">
         <div class="about-heading"><p class="eyebrow">A trusted manufacturing journey</p><h2>Experience in every<br /><span>weave and stitch.</span></h2></div>
-        <div class="about-copy"><p>Jain Poly Fab’s journey began in 1994. In 2005, the business established JK Poly Packs for HDPE and PP bags and fabrics, then grew its capability with a modernized manufacturing unit in Jammu.</p><p>Today, we produce woven fabrics and bags for varied packaging needs, combining capable machinery with in-house quality testing and a practical, customer-focused approach.</p><a class="inline-link" href="#manufacturing">See how we make it <span>↗</span></a></div>
+        <div class="about-copy"><p>Jain Poly Fab’s journey began in 1994. In 2005, the business established JK Poly Packs for HDPE and PP bags and fabrics, then grew its capability with a modernized manufacturing unit in Jammu.</p><p>We evaluate each request, develop packaging to suit the application and manufacture HDPE/PP fabrics and bags with capable machinery, in-house quality testing and a customer-focused approach.</p><a class="inline-link" href="#manufacturing">See how we make it <span>↗</span></a></div>
       </div>
+      <figure class="wrap about-photo"><img src="public/images/machine-extrusion.jpg" alt="Tape extrusion machinery shown in the company catalogue" loading="lazy" /><figcaption>Modernized machinery for woven packaging production</figcaption></figure>
       <div class="wrap facts"><div><strong>1994</strong><span>Manufacturing journey begins</span></div><div><strong>2005</strong><span>JK Poly Packs established</span></div><div><strong>3 lakh<span>+</span></strong><span>Bags per day capacity</span></div><p>Made in Jammu for customers across essential industries.</p></div>
     </section>
 
@@ -48,22 +52,32 @@
       <div class="wrap">
         <div class="section-heading"><div><p class="eyebrow">Our products</p><h2>Made for the job.</h2></div><p>Useful, dependable woven packaging for a wide range of applications.</p></div>
         <div class="product-grid">
-          <article class="product-card"><a href="#contact" data-product="HDPE / PP Woven Fabric"><div class="product-image"><img src="public/images/product-fabric.jpg" alt="HDPE and PP woven fabric rolls" loading="lazy" /></div><h3>HDPE / PP Woven Fabric</h3><span class="card-link">Enquire <b>↗</b></span></a></article>
-          <article class="product-card"><a href="#contact" data-product="Block Bottom Bags"><div class="product-image"><img src="public/images/product-block-bottom.jpg" alt="Block bottom packaging bag" loading="lazy" /></div><h3>Block Bottom Bags</h3><span class="card-link">Enquire <b>↗</b></span></a></article>
-          <article class="product-card"><a href="#contact" data-product="Cement Bags"><div class="product-image"><img src="public/images/product-cement.jpg" alt="Cement bags" loading="lazy" /></div><h3>Cement Bags</h3><span class="card-link">Enquire <b>↗</b></span></a></article>
-          <article class="product-card"><a href="#contact" data-product="BOPP Laminated Bags"><div class="product-image"><img src="public/images/product-bopp.jpg" alt="BOPP laminated bags" loading="lazy" /></div><h3>BOPP Laminated Bags</h3><span class="card-link">Enquire <b>↗</b></span></a></article>
-          <article class="product-card"><a href="#contact" data-product="Sand Bags"><div class="product-image"><img src="public/images/product-sand.jpg" alt="Woven sand bag" loading="lazy" /></div><h3>Sand Bags</h3><span class="card-link">Enquire <b>↗</b></span></a></article>
+          <article class="product-card" id="product-fabric"><a href="#contact" data-product="HDPE / PP Woven Fabric" data-description="Woven PP and HDPE fabric rolls for a range of packaging applications."><div class="product-image"><img src="public/images/product-fabric.jpg" alt="HDPE and PP woven fabric rolls" loading="lazy" /></div><h3>HDPE / PP Woven Fabric</h3><p>Woven rolls for a range of packaging applications.</p><span class="card-link">View product <b>↗</b></span></a></article>
+          <article class="product-card" id="product-block-bottom"><a href="#contact" data-product="Block Bottom Bags" data-description="Block-bottom valve bags made from coated polypropylene woven fabric."><div class="product-image"><img src="public/images/product-block-bottom.jpg" alt="Block bottom packaging bag" loading="lazy" /></div><h3>Block Bottom Bags</h3><p>Block-bottom formats for valve bag packaging.</p><span class="card-link">View product <b>↗</b></span></a></article>
+          <article class="product-card" id="product-cement"><a href="#contact" data-product="Cement Bags" data-description="Woven bags for cement and related building material packaging."><div class="product-image"><img src="public/images/product-cement.jpg" alt="Cement bags" loading="lazy" /></div><h3>Cement Bags</h3><p>Woven bags for cement packaging.</p><span class="card-link">View product <b>↗</b></span></a></article>
+          <article class="product-card" id="product-bopp"><a href="#contact" data-product="BOPP Laminated Bags" data-description="Printed BOPP laminated woven bags for product packaging."><div class="product-image"><img src="public/images/product-bopp.jpg" alt="BOPP laminated bags" loading="lazy" /></div><h3>BOPP Laminated Bags</h3><p>Printed laminated bags for product packaging.</p><span class="card-link">View product <b>↗</b></span></a></article>
+          <article class="product-card" id="product-sand"><a href="#contact" data-product="Sand Bags" data-description="Woven bags for sand and construction packaging needs."><div class="product-image"><img src="public/images/product-sand.jpg" alt="Woven sand bag" loading="lazy" /></div><h3>Sand Bags</h3><p>Woven sacks for construction applications.</p><span class="card-link">View product <b>↗</b></span></a></article>
         </div>
       </div>
     </section>
+    <dialog class="product-dialog" id="product-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-card">
+        <button class="dialog-close" type="button" aria-label="Close product details">×</button>
+        <p class="eyebrow">Product details</p>
+        <img class="dialog-image" id="dialog-image" src="" alt="Selected product image" />
+        <h2 id="dialog-title"></h2>
+        <p id="dialog-description"></p>
+        <a class="button button-red" id="dialog-enquire" href="#contact">Enquire about this product <b>↗</b></a>
+      </div>
+    </dialog>
 
     <section class="manufacturing section" id="manufacturing">
       <div class="wrap">
         <div class="section-heading section-heading-light"><div><p class="eyebrow eyebrow-light">Manufacturing</p><h2>Built around precision.</h2></div><p>Modern machinery supports every stage, from tape and fabric to finished bags.</p></div>
         <div class="machine-grid">
           <article class="machine-card"><div class="machine-image"><img src="public/images/machine-extrusion.jpg" alt="Lohia Duotec tape extrusion line" loading="lazy" /></div><div class="machine-info"><span>01</span><div><h3>Tape extrusion line</h3><p>Lohia Duotec lines produce PP and HDPE tapes for woven, knitted and jumbo bags.</p></div></div></article>
-          <article class="machine-card"><div class="machine-image"><img src="public/images/machine-looms.jpg" alt="Lohia circular loom" loading="lazy" /></div><div class="machine-info"><span>02</span><div><h3>Circular looms</h3><p>Weaving tubular or flat PP and HDPE fabrics for end use.</p></div></div></article>
-          <article class="machine-card"><div class="machine-image"><img src="public/images/machine-coating.jpg" alt="Extrusion coating line" loading="lazy" /></div><div class="machine-info"><span>03</span><div><h3>Extrusion coating</h3><p>Precision coating for tubular or flat woven fabric.</p></div></div></article>
+          <article class="machine-card"><div class="machine-image"><img src="public/images/machine-looms.jpg" alt="Lohia circular loom" loading="lazy" /></div><div class="machine-info"><span>02</span><div><h3>Circular looms</h3><p>Lohia looms weave tubular or flat PP and HDPE fabrics for varied end uses.</p></div></div></article>
+          <article class="machine-card"><div class="machine-image"><img src="public/images/machine-coating.jpg" alt="Extrusion coating line" loading="lazy" /></div><div class="machine-info"><span>03</span><div><h3>Extrusion coating</h3><p>Lohia lines provide precision coating for tubular or flat woven fabric.</p></div></div></article>
           <article class="machine-card"><div class="machine-image"><img src="public/images/machine-printing.jpg" alt="Prismaflex flexographic printing machine" loading="lazy" /></div><div class="machine-info"><span>04</span><div><h3>Prismaflex printing</h3><p>High-speed roll-to-roll flexographic printing for fabric and bags.</p></div></div></article>
           <article class="machine-card"><div class="machine-image"><img src="public/images/machine-valvomatic.jpg" alt="Valvomatic 40 bag conversion machine" loading="lazy" /></div><div class="machine-info"><span>05</span><div><h3>Valvomatic 40</h3><p>Production of stitched valve-type bags from tubular fabric.</p></div></div></article>
           <article class="machine-card"><div class="machine-image"><img src="public/images/machine-blokomatic.jpg" alt="Blokomatic block-bottom bag machine" loading="lazy" /></div><div class="machine-info"><span>06</span><div><h3>Blokomatic</h3><p>Converts coated PP fabric into block-bottom valve bags.</p></div></div></article>
@@ -72,10 +86,10 @@
     </section>
 
     <section class="quality section" id="quality">
-      <div class="wrap quality-layout"><div><p class="eyebrow">Quality assurance</p><h2>Quality checked<br /><span>at every stage.</span></h2></div><div class="quality-copy"><p>Quality guides our work from procurement through manufacturing and delivery. Our in-house testing laboratory and technical staff help maintain consistent product quality.</p><ul><li>Superior-grade polymers and additive materials</li><li>Standardized testing by technical staff</li><li>Quality control throughout production</li></ul></div></div>
+      <div class="wrap quality-layout"><div class="quality-intro"><p class="eyebrow">Quality assurance</p><h2>Quality checked<br /><span>at every stage.</span></h2><figure class="quality-photo"><img src="public/images/quality-lab.jpg" alt="Quality testing environment pictured in the company catalogue" loading="lazy" /><figcaption>Quality and testing</figcaption></figure></div><div class="quality-copy"><p>Quality guides our work from procurement through manufacturing and delivery. Our in-house testing laboratory and technical staff help maintain consistent product quality.</p><ul><li>Superior-grade polymers and additive materials</li><li>Standardized testing by technical staff</li><li>Quality control throughout production</li></ul></div></div>
     </section>
 
-    <section class="industries">
+    <section class="industries" id="industries">
       <div class="wrap industries-row"><div><p class="eyebrow eyebrow-light">Industries served</p><h2>Packaging for<br />essential work.</h2></div><div class="industry-list"><span>Cement</span><span>Sugar</span><span>Fertilizers</span><span>Construction</span><span>Industrial packaging</span></div></div>
     </section>
 
@@ -85,7 +99,7 @@
         <div class="contact-grid">
           <div class="contact-info">
             <div class="contact-person"><span class="small-label">DIRECTOR</span><h3>Amit Kumar Jain</h3><a href="tel:+919419106987">+91 94191 06987 ↗</a><a href="mailto:amitjainjk14@gmail.com">amitjainjk14@gmail.com ↗</a></div>
-            <div><span class="small-label">FACTORY</span><p>Lane No. 4, Opposite Vectus Industries,<br />SIDCO Industrial Complex, Bari Brahmana,<br />Jammu – 181133, Jammu &amp; Kashmir</p><a class="inline-link" href="https://maps.google.com/?q=Jain+Poly+Fab+SIDCO+Industrial+Complex+Bari+Brahmana+Jammu" target="_blank" rel="noreferrer">View on Google Maps <span>↗</span></a></div>
+            <div class="factory-address"><span class="small-label">FACTORY</span><p>Lane No. 4, Opposite Vectus Industries,<br />SIDCO Industrial Complex, Bari Brahmana,<br />Jammu – 181133, Jammu &amp; Kashmir</p><a class="inline-link" href="https://maps.google.com/?q=Jain+Poly+Fab+SIDCO+Industrial+Complex+Bari+Brahmana+Jammu" target="_blank" rel="noreferrer">View on Google Maps <span>↗</span></a><iframe class="map-frame" src="https://maps.google.com/maps?q=SIDCO%20Industrial%20Complex%2C%20Bari%20Brahmana%2C%20Jammu%20181133&amp;output=embed" title="Map of Jain Poly Fab factory in Bari Brahmana, Jammu" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
             <div><span class="small-label">HEAD OFFICE</span><p>111/1, Trikuta Nagar, Near Post Office,<br />Jammu – 180012, Jammu &amp; Kashmir</p></div>
             <div><span class="small-label">GENERAL ENQUIRIES</span><a href="mailto:jainpolyfab12@gmail.com">jainpolyfab12@gmail.com</a></div>
           </div>
@@ -102,7 +116,7 @@
     </section>
   </main>
 
-  <footer class="footer"><div class="wrap footer-main"><a class="brand footer-brand" href="#top"><img src="public/images/jain-polyfab-logo.jpg" alt="Jain Polyfab" /></a><p>Woven packaging, made with care.<br />Jammu, Jammu &amp; Kashmir, India.</p><div><a href="#about">About</a><a href="#products">Products</a><a href="#manufacturing">Manufacturing</a><a href="#contact">Contact</a></div><a href="tel:+919419106987">+91 94191 06987</a></div><div class="wrap footer-base"><span>© <span id="year">2026</span> Jain Poly Fab Pvt. Ltd.</span><a href="#top">Back to top ↑</a></div></footer>
+  <footer class="footer"><div class="wrap footer-main"><a class="brand footer-brand" href="#top"><img src="public/images/jain-polyfab-logo.png" alt="Jain Polyfab" /></a><p class="footer-summary">Woven packaging, made with care.<br />Jammu, Jammu &amp; Kashmir, India.</p><div class="footer-links"><span>EXPLORE</span><a href="#about">About</a><a href="#manufacturing">Manufacturing</a><a href="#quality">Quality</a><a href="#industries">Industries</a><a href="#contact">Contact</a></div><div class="footer-links"><span>PRODUCTS</span><a href="#product-fabric">HDPE / PP Woven Fabric</a><a href="#product-block-bottom">Block Bottom Bags</a><a href="#product-cement">Cement Bags</a><a href="#product-bopp">BOPP Laminated Bags</a><a href="#product-sand">Sand Bags</a></div><div class="footer-contact"><span>GET IN TOUCH</span><a href="tel:+919419106987">+91 94191 06987</a><a href="mailto:jainpolyfab12@gmail.com">jainpolyfab12@gmail.com</a><p>Lane No. 4, SIDCO Industrial Complex,<br />Bari Brahmana, Jammu – 181133</p></div></div><div class="wrap footer-base"><span>© <span id="year">2026</span> Jain Poly Fab Pvt. Ltd.</span><a href="#top">Back to top ↑</a></div></footer>
   <script src="script.js"></script>
 </body>
 </html>
